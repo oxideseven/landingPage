@@ -75,9 +75,10 @@ header img {
 
 .boxOne {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-content: center;
     padding: 16px;
+    gap: 20px;
 }
 
 .left, .right {
@@ -109,7 +110,8 @@ header img {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 10px;
 }
 
 .card {
