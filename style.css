@@ -1,3 +1,22 @@
+/* GLOBAL STUFF */
+:root {
+    --light1: #ebebeb;
+    --light2: #fff;
+    --dark1: #2a2424;
+    --dark1L: #473d3d;
+    --dark1L-hover:#3d3434;
+    --dark1L-active:#584b4b;
+    --dark2: #0d0d0d;
+    --aem-purple: #8018c4;
+    --aem-green: #04AA6D;
+    --aem-yellow: #da9600;
+}
+
+@font-face {
+    font-family: system;
+    src: local(".SFNS-Light"), local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Segoe UI Light"), local("Ubuntu Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
 /* Overall styling */
 
 html {
@@ -68,14 +87,14 @@ header img {
     text-decoration: none;
     font-size: 14px;
     color: lightgray;
-    margin-right: 8px;
+    margin-left: 8px;
 }
 
 /* Hero section */
 
 .boxOne {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: center;
     padding: 16px;
 }
@@ -115,12 +134,13 @@ header img {
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border: lightseagreen;
     border-width: 2px;
     border-style: solid;
     border-radius: 5px;
+    margin: 8px;
     padding: 5px;
     height: 200px;
     width: 200px;
@@ -188,4 +208,41 @@ footer {
     color: lightgray;
     font-size: 12px;
     font-weight: 500;
+}
+
+/* Wia Footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+
+    font-size: 12px;
+}
+
+.ion-github {
+    color: var(--aem-purple);
+    font-size: 24px;
+}
+  
+.ion-github:hover {
+    animation: skew 0.2s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+    transform: scale(1.2);
+}
+
+@keyframes skew {
+    0% {
+        transform: skew(20deg, 20deg);
+    }
+    100% {
+        transform: skew(-20deg, -20deg);
+    }
 }
